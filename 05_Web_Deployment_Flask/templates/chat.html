@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful客服机器人 - 文本模式</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Colorful客服机器人 - 文本模式</h1>
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <p>{{ welcome_message|safe }}</p>
+            </div>
+            <form id="chat-form">
+                <input type="text" id="user-input" placeholder="请输入您的问题">
+                <button type="submit" class="btn">发送</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
